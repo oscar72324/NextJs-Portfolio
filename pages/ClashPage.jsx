@@ -7,7 +7,7 @@ const ClashPage = () => {
         <div className=" w-full py-20 h-screen">
             <div className="h-full">
                 <div className="w-full h-1/2 relative">
-                    <Image src={clash} className="h-full object-fill lg:object-cover w-full"/>
+                    <Image src={clash} className="h-full object-fill lg:object-cover w-full rounded-lg" alt="Picture of Clash Royale App"/>
                     <div className="absolute z-10 top-0 left-0 w-full h-full bg-black opacity-70 transition-opacity rounded-lg"></div>
                 </div>
 

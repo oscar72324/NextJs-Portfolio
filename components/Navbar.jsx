@@ -2,19 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose, GrLinkedinOption, GrGithub, GrMail } from "react-icons/gr";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     const navHandler = () =>{
         setNav(!nav)
-
     }
 
+    useEffect(() => {
+        // add/remove "overflow-hidden" class to the body tag when the side nav is opened/closed
+        if (nav) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+          document.body.classList.remove("overflow-hidden");
+        }
+        console.log('yo')
+      }, [nav]);
+
     return ( 
-        <div className="w-full h-20 border-b border-neutral-200 shadow-lg fixed z-40 bg-white">
-            <div className="flex w-full justify-between items-center h-full px-8">
+        <div className="w-full h-20 border-b border-neutral-200 shadow-lg fixed z-40 bg-white overflow-hidden">
+            <div className="flex w-full justify-between items-center h-full px-8 overflow-hidden">
                 <h1 className="font-semibold text-5xl text-sky-900">
                     <Link href="/">Oscar</Link>
                 </h1>
@@ -58,20 +67,20 @@ const Navbar = () => {
                         <ul className="md:hidden py-4 flex flex-col my-20 text-2xl">
                             
                             <li className="py-4">
-                            <Link href="#experience" onClick={navHandler}>
+                            <Link href="/#experience" onClick={navHandler}>
                                 Experience
                                 </Link>
                             </li>
                             
 
                             <li className="py-4">
-                            <Link href="#skills" onClick={navHandler}>
+                            <Link href="/#skills" onClick={navHandler}>
                                 Skills
                                 </Link>
                             </li>
 
                             <li className="py-4">
-                            <Link href="#projects" onClick={navHandler}>
+                            <Link href="/#projects" onClick={navHandler}>
                                 Projects
                                 </Link>
                             </li>
