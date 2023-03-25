@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose, GrLinkedinOption, GrGithub, GrMail } from "react-icons/gr";
+import { BsFileEarmarkPerson } from "react-icons/bs"
 import { useEffect, useState } from "react";
 
 const HomePage = () => {
@@ -57,9 +58,9 @@ const HomePage = () => {
                                 </li>
                             </Link>
 
-                            <Link href="mailto:Oscaribarra72@hotmail.com">
+                            <Link href="https://drive.google.com/file/d/1JUBrbQjXRGET_aSUBfFuwCoIvGQTiQJH/view">
                                 <li className="rounded-full p-2 shadow-lg shadow-gray-200 text-lg md:text-3xl hover:bg-gray-200">
-                                    <GrMail />
+                                    <BsFileEarmarkPerson />
                                 </li>
                             </Link>
                     </ul>

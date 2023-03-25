@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsFileEarmarkPerson } from "react-icons/bs"
 import { GrClose, GrLinkedinOption, GrGithub, GrMail } from "react-icons/gr";
 import { useState, useEffect } from "react";
 
@@ -102,9 +103,9 @@ const Navbar = () => {
                                 </li>
                             </Link>
 
-                            <Link href="mailto:Oscaribarra72@hotmail.com">
+                            <Link href="https://drive.google.com/file/d/1JUBrbQjXRGET_aSUBfFuwCoIvGQTiQJH/view?usp=sharing">
                                 <li className="rounded-full p-2 shadow-lg shadow-gray-200 text-3xl hover:bg-gray-200">
-                                    <GrMail />
+                                    <BsFileEarmarkPerson />
                                 </li>
                             </Link>
                             
